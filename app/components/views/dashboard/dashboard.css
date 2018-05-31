@@ -1,0 +1,8 @@
+.widgetHolder{
+  width: calc(100% - 65px);
+  height: calc(100% - 65px);
+  min-width: calc(100% - 65px);
+  min-height: calc(100% - 65px);
+  max-width: calc(100% - 65px);
+  max-height: calc(100% - 65px);
+}

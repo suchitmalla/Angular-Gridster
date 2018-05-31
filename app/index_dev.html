@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loop">
+  <head>
+    <!-- Hotjar Tracking Code for http://localhost:3100/loop-dashboard/app/index_dev.html#!/dashboard -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:894389,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Loop Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//static.nfsmith.com/common/css/material-design-icons/material-icons.css">
+    <link rel="stylesheet" href="//static.nfsmith.com/common/fonts/robotodraft/robotodraft.css">
+    <link rel="stylesheet" href="//static.nfsmith.com/lib/angular-material/1.1.9/angular-material.min.css"/>
+    <link rel="stylesheet" href="../node_modules/angular-gridster/dist/angular-gridster.min.css"></script>
+
+    <style>
+      .primary-dark{
+        background-color: {{primaryDarkColor}};
+      }
+      .primary-dark-pseudo:before{
+        background-color: {{primaryDarkColor}};
+      }
+      .primary-accent-pseudo:before{
+        background-color: {{primaryAccentColor}};
+      }
+      .primary-pseudo:before{
+        background-color: {{primaryColor}};
+      }
+      .accent-text{
+        color: {{primaryAccentColor}};
+      }
+      [ng-click]{
+        color: {{primaryColor}};
+      }
+    </style>
+
+    <!-- injector:css -->
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <!-- Global Directives CSS -->
+    <link rel="stylesheet" href="shared/directives/directive1/directive1.css">
+
+    <!-- Components CSS -->
+    <link rel="stylesheet" href="components/header-nav/header-nav.css">
+    <link rel="stylesheet" href="components/side-nav/side-nav.css">
+
+    <!-- Views CSS -->
+    <link rel="stylesheet" href="components/views/dashboard/dashboard.css">
+    <link rel="stylesheet" href="components/views/dashboard/widgets/widget1/widget1.css">
+    <link rel="stylesheet" href="components/views/dashboard/widgets/widget2/widget2.css">
+    <link rel="stylesheet" href="components/views/dashboard/widgets/widget3/widget3.css">
+    <link rel="stylesheet" href="components/views/dashboard/widgets/widget4/widget4.css">
+    <!-- endinjector -->
+  </head>
+  <body>
+    <script lang="javascript" src="//static.nfsmith.com/lib/jquery/2.1.0/jquery-2.1.0.min.js"></script>
+		<script lang="javascript" src="//static.nfsmith.com/lib/angular/1.6.10/angular.min.js"></script>
+		<script lang="javascript" src="//static.nfsmith.com/lib/angular/1.6.10/angular-animate.min.js"></script>
+		<script lang="javascript" src="//static.nfsmith.com/lib/angular/1.6.10/angular-aria.min.js"></script>
+		<script lang="javascript" src="//static.nfsmith.com/lib/angular/1.6.10/angular-messages.min.js"></script>
+		<script lang="javascript" src="//static.nfsmith.com/lib/angular/1.6.10/angular-sanitize.min.js"></script>
+		<script lang="javascript" src="//static.nfsmith.com/lib/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+		<script lang="javascript" src="//static.nfsmith.com/lib/angular-material/1.1.9/angular-material.min.js"></script>
+    <script lang="javascript" src="../node_modules/angular-gridster/dist/angular-gridster.min.js"></script>
+    <script lang="javascript" src="../node_modules/javascript-detect-element-resize/jquery.resize.js"></script>
+
+    <!-- injector:js -->
+    <!--App core-->
+    <script src="loop.module.js"></script>
+    <script src="loop.run.js"></script>
+    <script src="loop.routes.js"></script>
+    <script src="loop.theme.js"></script>
+
+    <!--App Components-->
+    <!--App Version-->
+    <script src="components/version/version.js"></script>
+    <script src="components/version/version-directive.js"></script>
+    <script src="components/version/interpolate-filter.js"></script>
+
+    <!--App Global Directives-->
+    <script src="shared/directives/directive1/directive1.controller.js"></script>
+    <script src="shared/directives/directive1/directive1.directive.js"></script>
+    <script src="shared/directives/directive1/directive1.service.js"></script>
+
+    <!--App Global Services-->
+    <script src="shared/services/service1.js"></script>
+
+    <!--App Root Folder-->
+    <script src="core/root/root.controller.js"></script>
+
+    <!--App Side Navigation-->
+    <script src="components/side-nav/side-nav.controller.js"></script>
+    <script src="components/side-nav/side-nav.service.js"></script>
+
+    <!--App Header Navigation-->
+    <script src="components/header-nav/header-nav.controller.js"></script>
+    <script src="components/header-nav/header-nav.service.js"></script>
+
+    <!--App Dasboard Widgets-->
+    <script src="components/views/dashboard/dashboard.controller.js"></script>
+    <script src="components/views/dashboard/dashboard.service.js"></script>
+    <script src="components/views/dashboard/dashboard.route.js"></script>
+
+    <!--Dashboard Widgets-->
+    <script src="components/views/dashboard/widgets/widget1/widget1.controller.js"></script>
+    <script src="components/views/dashboard/widgets/widget1/widget1.directive.js"></script>
+    <script src="components/views/dashboard/widgets/widget1/widget1.service.js"></script>
+
+    <script src="components/views/dashboard/widgets/widget2/widget2.controller.js"></script>
+    <script src="components/views/dashboard/widgets/widget2/widget2.directive.js"></script>
+    <script src="components/views/dashboard/widgets/widget2/widget2.service.js"></script>
+
+    <script src="components/views/dashboard/widgets/widget3/widget3.controller.js"></script>
+    <script src="components/views/dashboard/widgets/widget3/widget3.directive.js"></script>
+    <script src="components/views/dashboard/widgets/widget3/widget3.service.js"></script>
+
+    <script src="components/views/dashboard/widgets/widget4/widget4.controller.js"></script>
+    <script src="components/views/dashboard/widgets/widget4/widget4.directive.js"></script>
+    <script src="components/views/dashboard/widgets/widget4/widget4.service.js"></script>
+
+    <!-- endinjector -->
+    <div id="version">Loop VERSION: v<span loop-version></span></div>
+
+    <div layout="column">
+      <div ui-view="headerNavView" class="headerNav"></div>
+      <div layout="row">
+        <div ui-view="sideNavView" class="sideNav"></div>
+        <div ui-view="rootView" class="widgetHolder"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<div class="loading-container fade" ng-if="rootVm.showLoader">
+    <md-paper-loader buffer="0"></md-paper-loader>
+</div>
+<div class="loading-message fade" ng-if="rootVm.showLoaderMessage && rootVm.showLoader">
+    <div layout="column" layout-align="center center">
+        <icon-loader active="rootVm.showLoader"></icon-loader>
+        Fetching your report...
+    </div>
+</div>
+<div ui-view="mainView"></div>

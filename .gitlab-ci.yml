@@ -1,0 +1,20 @@
+image: adrianchia/docker-node-puppeteer:latest
+
+stages:
+  - test
+
+test_with_lab:
+  stage: test
+  script: echo "Running tests"
+  script:
+    - npm install
+    - npm test
+
+deploy_staging:
+  stage: test
+  script:
+    - echo "Deploy to QA"
+  environment:
+    name: QA
+  only:
+    - develop

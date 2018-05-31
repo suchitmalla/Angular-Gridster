@@ -1,0 +1,15 @@
+<div data-gridster>
+  <md-card data-gridster-item
+      data-row="item.position[0]"
+      data-col="item.position[1]"
+      data-sizex="item.size.x"
+      data-sizey="item.size.y"
+      ng-repeat="item in dashboardVm.customItems">
+    <md-card-content>
+      <widget-one ng-if="item.value=='widget-one'"></widget-one>
+      <widget-two ng-if="item.value=='widget-two'"></widget-two>
+      <widget-three ng-if="item.value=='widget-three'"></widget-three>
+      <widget-four ng-if="item.value=='widget-four'"></widget-four>
+    </md-card-content>
+  </md-card>
+</div>
